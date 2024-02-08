@@ -4,7 +4,8 @@
 }
 
 body{
-  background: #000;
+  background: black;
   color: white;
   font-family: 'Lobster',cursive;
+  overflow-x: hidden;
 }
