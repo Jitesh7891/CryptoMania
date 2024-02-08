@@ -30,14 +30,14 @@ const Exchanges = () => {
             <div className='ex-headings'>
               <div >Market <br/> &nbsp;Rank</div>
               <div className='ex-name-heading'>Name</div>
-              <div className='ex-name-heading'>Price</div>
+              <div className='ex-price-heading'>Price</div>
               <div >Symbol</div>
             </div>
           <div style={{marginTop:"14rem"}}>
           {
-              exchanges.map((item, i) => {
+              exchanges.map((item, index) => {
                 return (
-          <div key={i} className='ex-cards'>
+          <div key={index} className='ex-cards'>
             <div className="rank">
               {item.trust_score_rank}
             </div>

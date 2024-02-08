@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(43, 39, 39);
+    background-color: black;
     padding-bottom: 1rem ;
     padding-top: 0.7rem;
     position: fixed;
@@ -17,19 +17,27 @@
 .navbar ul{
     display: flex;
     list-style: none;
+    justify-content: space-around;
+    /* background-color: red; */
+    /* max-width: 60%; */
+    margin-left: 3rem;
 }
 .navbar ul li a{
     margin-left: 15rem;
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
-
 }
 
 .logo{
     display: flex;
     align-items: center;
+}
+
+.logo>a{
+    text-decoration: none;
     color: white;
+    
 }
 
 @media  screen and (max-width: 600px) {
