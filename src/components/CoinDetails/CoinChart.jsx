@@ -32,7 +32,6 @@ const CoinChart = ({currency}) => {
         try {
             const { data } = await axios.get(`${Baseurl}/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`)
             setChartData(data.prices)
-            console.log(data.prices)
         } catch (error) {
             console.log(error)  
         }

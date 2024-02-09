@@ -7,6 +7,7 @@ import '../Exchanges/exchanges.css'
 import './coins.css'
 import { Link } from 'react-router-dom'
 
+
 const Coins = () => {
 
   const [loading, setLoading] = useState(true)
@@ -20,7 +21,6 @@ const Coins = () => {
       try {
         const { data } = await axios.get(`${Baseurl}/coins/markets?vs_currency=${currency}`)
         data.sort((a, b) => b.current_price - a.current_price)
-        console.log(data)
         setCoins(data)
         setLoading(false)
       } catch (error) {
@@ -30,6 +30,10 @@ const Coins = () => {
     }
     getCoinsData()
   }, [currency])
+
+  useEffect(() => {
+
+  }, [search])
 
   return (
 
@@ -41,7 +45,6 @@ const Coins = () => {
             <input type="text"
               placeholder='Search Your Coins '
               onChange={(e) => setSearch(e.target.value)}
-
             />
           </div>
 
@@ -52,34 +55,36 @@ const Coins = () => {
           </div>
           <div className='coin-headings'>
             <div className='coin-heading-name'>Name</div>
-            <div className='coin-heading-price'>Price</div>
+            <div className='coin-heading-price'>Current<br/>&nbsp;Price</div>
             <div className='coin-heading-symbol'>Symbol</div>
             <div className='coin-heading-percent'>% Change<br />(Last 24hr)</div>
 
           </div>
           <div className='coins-body'>
             {
-              coins.map((item, index) => {
+              coins.filter((data) => {
+                return data.name.toLowerCase().includes(search.toLowerCase());
+              }).map((item, index) => {
                 return (
-                  <Link to ={`/coins/${item.id}`} style={{color:'white',textDecoration:'none'}}>
-                  <div key={index} className='ex-cards' >
-                    <div className="name">
-                      {item.name}
+                  <Link to={`/coins/${item.id}`} style={{ color: 'white', textDecoration: 'none' }}>
+                    <div key={index} className='ex-cards' >
+                      <div className="name">
+                        {item.name}
+                      </div>
+                      <div className="price">
+                        {currencySymbol}{item.current_price.toFixed(0)}
+                      </div>
+                      <div className="coins-image">
+                        <img height={"80px"} src={item.image} alt="" />
+                      </div>
+                      {item.price_change_percentage_24h > 0 && <div className="rank" style={{ color: '#03d900' }}>
+                        +{item.price_change_percentage_24h.toFixed(1)}
+                      </div>}
+                      {item.price_change_percentage_24h < 0 && <div className="rank" style={{ color: 'red' }}>
+                        {item.price_change_percentage_24h.toFixed(1)}
+                      </div>}
                     </div>
-                    <div className="price">
-                      {currencySymbol}{item.current_price.toFixed(0)}
-                    </div>
-                    <div className="coins-image">
-                      <img height={"80px"} src={item.image} alt="" />
-                    </div>
-                    {item.price_change_percentage_24h > 0 && <div className="rank" style={{ color: '#03d900' }}>
-                      +{item.price_change_percentage_24h.toFixed(1)}
-                    </div>}
-                    {item.price_change_percentage_24h < 0 && <div className="rank" style={{ color: 'red' }}>
-                      {item.price_change_percentage_24h.toFixed(1)}
-                    </div>}
-                  </div>
-                </Link>
+                  </Link>
                 )
               })
             }

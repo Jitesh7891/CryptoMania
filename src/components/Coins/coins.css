@@ -34,7 +34,6 @@
     top: 4rem;
     left: -12rem;
     background-color: rgb(15, 15, 15);
-    /* background-color: green;  */
     padding-left: 9rem;
     z-index: 4;
     position: fixed;
@@ -48,14 +47,18 @@
     font-size: 1rem;
 }
 
+
 .search-bar input{
     height: 2rem;
-    width: 20rem;
+    border-radius: 50px;
+    width: 14rem;
     z-index: 5;
     position: fixed;
     top: 1rem;
     left: 33%;
     padding-left: 5px;
+    border: none;
+    outline: none;
 }
 
 .coins-title{
@@ -69,6 +72,11 @@
 .coins-body{
     margin-top: 23rem;
     margin-right: 3rem;
+}
+@media screen and (max-width:860px) {
+ .search-bar input{
+    left: 25%;
+ }
 }
 
 @media only screen and (max-width: 600px) {
@@ -102,5 +110,16 @@
     }
     .coin-heading-price{
         left: 1.8rem;
+    }
+    .search-bar input{
+        position: fixed;
+        top: 10%;
+        left: 7%;
+        max-width: 70vw;
+        text-decoration: none;
+    }
+    .coins-title{
+        position: relative;
+        top: 3rem;
     }
 }

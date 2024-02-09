@@ -1,0 +1,13 @@
+.readbtn{
+    background-color: #dd1111 !important;
+    color: white !important;
+}
+
+.readbtn:hover{
+    background-color: red !important;
+    color: white !important;
+}
+
+.newsimg{
+    max-height: 35vh !important;
+}

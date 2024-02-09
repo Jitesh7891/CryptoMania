@@ -14,7 +14,7 @@ const Exchanges = () => {
     const getExchangesData = async () => {
       try{
       const { data } = await axios.get(`${Baseurl}/exchanges`)
-      console.log(data)
+  
       setExchanges(data)
       setLoading(false)
       }catch(error){
@@ -31,14 +31,14 @@ const Exchanges = () => {
       {
         loading ? <Loader /> : <div>
           <Navbar />
-
+            <div className='ex-title'>Cryptocurrency Exchanges</div>
             <div className='ex-headings'>
               <div >Market <br/> &nbsp;Rank</div>
               <div className='ex-name-heading'>Name</div>
-              <div className='ex-price-heading'>Price</div>
+              <div className='ex-price-heading'>Trade<br/>Volume</div>
               <div >Symbol</div>
             </div>
-          <div style={{marginTop:"14rem"}}>
+          <div style={{marginTop:"18rem"}}>
           {
               exchanges.map((item, index) => {
                 return (

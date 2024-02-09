@@ -21,7 +21,6 @@ const CoinDetails = () => {
     const getCoin = async () => {
       try {
         const { data } = await axios.get(`${Baseurl}/coins/${id}`)
-         console.log(data) 
         setCoin(data)
         const descriptionSegments = data.description['en'].split('.');
         setdescriptionSegments(descriptionSegments)
