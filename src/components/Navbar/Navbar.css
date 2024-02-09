@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     padding-bottom: 1rem ;
     padding-top: 0.7rem;
     position: fixed;
@@ -37,7 +37,7 @@
 .logo>a{
     text-decoration: none;
     color: white;
-    
+    outline: none;
 }
 
 @media  screen and (max-width: 600px) {

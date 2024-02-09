@@ -12,10 +12,15 @@ const Exchanges = () => {
 
   useEffect(() => {
     const getExchangesData = async () => {
+      try{
       const { data } = await axios.get(`${Baseurl}/exchanges`)
       console.log(data)
       setExchanges(data)
       setLoading(false)
+      }catch(error){
+        console.log(error)
+        setLoading(false)
+      }
     }
     getExchangesData()
   }, [])
@@ -45,7 +50,7 @@ const Exchanges = () => {
               {item.name}
             </div>
             <div className="price">
-              {item.trade_volume_24h_btc.toFixed(1)}
+              ${item.trade_volume_24h_btc.toFixed(0)}
             </div>
             <div className="image">
               <img height={"80px"} src={item.image} alt="" />

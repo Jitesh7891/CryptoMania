@@ -3,7 +3,7 @@
     width: 90vw;
     margin-left: 5rem;
     position: fixed;
-    background-color: rgb(34,34,34);
+    background-color: rgb(15, 15, 15);
     padding: 3rem 0;
     top: 11rem;
     left: -2rem;
@@ -13,27 +13,39 @@
     justify-content: space-around;
     font-size: 1.7rem;
     font-weight: bold;
+    color: rgb(234, 255, 255);
 }
 
-.coin-headin-price{
+.coin-heading-price{
     position: relative;
-    left: 1rem;
+    left: 2.7rem;
+}
+.coin-heading-name{
+    position: relative;
+    left: 2rem;
+}
+.coin-heading-symbol{
+    position: relative;
+    left: 3rem;
 }
 
 .btns{
     width: 100vw;
-    top: 4.3rem;
-    left: -5rem;
-    background-color: rgb(34, 34, 34);
-    /* background-color: green; */
+    top: 4rem;
+    left: -12rem;
+    background-color: rgb(15, 15, 15);
+    /* background-color: green;  */
+    padding-left: 9rem;
     z-index: 4;
     position: fixed;
 }
 
 .btns>button{
-    background-color: #f88b31;
+    background-color: #9823db;
+    letter-spacing: 1.5px;
     cursor: pointer;
     color: white;
+    font-size: 1rem;
 }
 
 .search-bar input{
@@ -54,6 +66,10 @@
     font-size: 2.5rem;
 }
 
+.coins-body{
+    margin-top: 23rem;
+    margin-right: 3rem;
+}
 
 @media only screen and (max-width: 600px) {
     .coin-headings{
@@ -67,5 +83,24 @@
         right: 3rem;
         height: 50px;
         width: 50px;
+    }
+    .coin-heading-symbol{
+        left: 2rem;
+    }
+    .btns{
+        padding: 0;
+    }
+    .coins-body{
+        margin-right: 0;
+    }
+    .coin-heading-name{
+        left: 0;
+    }
+    .coin-heading-percent{
+        position: relative;
+        left: 1rem;
+    }
+    .coin-heading-price{
+        left: 1.8rem;
     }
 }
