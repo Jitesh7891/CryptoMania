@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi"
 import { IoPulseOutline } from "react-icons/io5"
 import './coinDetail.css'
-// import CoinChart from './CoinChart'
+import CoinChart from './CoinChart'
 
 const CoinDetails = () => {
   const [coin, setCoin] = useState([])
@@ -72,7 +72,12 @@ const CoinDetails = () => {
                 )} </p>
               </div>
             </div>
-            {/* <CoinChart currency={currency} />  */}
+            <div>
+            </div>
+            <div>
+
+            <CoinChart currency={currency} /> 
+            </div>
           </div>
         </>
       }

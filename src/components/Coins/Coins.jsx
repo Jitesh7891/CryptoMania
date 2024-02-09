@@ -69,7 +69,7 @@ const Coins = () => {
                     <div className="price">
                       {currencySymbol}{item.current_price.toFixed(0)}
                     </div>
-                    <div className="coin-image">
+                    <div className="coins-image">
                       <img height={"80px"} src={item.image} alt="" />
                     </div>
                     {item.price_change_percentage_24h > 0 && <div className="rank" style={{ color: '#03d900' }}>
