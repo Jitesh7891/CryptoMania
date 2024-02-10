@@ -49,18 +49,23 @@
 }
 @media  screen and (max-width: 600px) {
     .logo h1{
-        font-size: 20px;
+        font-size: 18px;
     }  
     .navbar{
+        /* background-color: green; */
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
-        height: 4rem;
+        height: 9vh;
+    }
+    .navbar ul{
+        margin-left: unset;
+        width: unset;
     }
     .navbar ul li a{
         margin-left: 10px;
-        font-size: 18px;
+        font-size: 15px;
     }
     
 

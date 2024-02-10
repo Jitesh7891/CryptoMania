@@ -38,7 +38,7 @@ const Exchanges = () => {
               <div className='ex-price-heading'>Trade<br/>Volume</div>
               <div >Symbol</div>
             </div>
-          <div style={{marginTop:"18rem"}}>
+          <div className='exchanges'>
           {
               exchanges.map((item, index) => {
                 return (
