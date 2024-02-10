@@ -32,7 +32,6 @@ const News = () => {
         justifyContent: 'center',
     };
 
-    // Add additional styles based on viewport size
     if (window.innerWidth < 768) {
         style.fontSize = '40px';
     } else if (window.innerWidth < 992) {

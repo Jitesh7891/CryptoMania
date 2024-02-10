@@ -5,7 +5,7 @@ const NewsItem = (props)=> {
 
         const newsTemStyle={
             border:'2px solid rgb(160, 160, 160)',
-            minHeight:'75vh',
+            minHeight:'78vh',
             padding:'2px',
             backgroundColor:'rgb(40,40,40)',
             color:'white'
