@@ -85,6 +85,8 @@
         letter-spacing: 0;
         font-size:1rem ;
         margin-left: 1rem;
+        padding-left: 10px;
+        margin-top: 2rem;
     }
     .coins-image>img{
         position: relative;
@@ -113,7 +115,7 @@
     }
     .search-bar input{
         position: fixed;
-        top: 10%;
+        top: 11%;
         left: 7%;
         max-width: 70vw;
         text-decoration: none;

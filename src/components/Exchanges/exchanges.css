@@ -1,4 +1,4 @@
-.ex-cards{
+.ex-cards {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -6,12 +6,13 @@
     font-size: 22px;
     font-weight: bold;
 }
-.ex-headings{
+
+.ex-headings {
     letter-spacing: 0.2rem;
     width: 90vw;
     margin-left: 5rem;
     position: fixed;
-    background-color: rgb(14,14,14);
+    background-color: rgb(14, 14, 14);
     padding: 3rem 0;
     top: 7.4rem;
     left: -2rem;
@@ -24,38 +25,43 @@
     color: rgb(234, 255, 255);
 }
 
-.name{
-    width: 7rem;
-}
-.price{
-    width: 7rem;
-}
-.rank{
+.name {
     width: 7rem;
 }
 
-.btns button{
-   height: 2rem;
-   background-color: #9823db;
-   border: none;
-   margin-left: 30px;
-   width: 5rem;
-   border-radius: 10px;
-   margin-top: 60px;
+.price {
+    width: 7rem;
 }
-.btns{
+
+.rank {
+    width: 7rem;
+}
+
+.btns button {
+    height: 2rem;
+    background-color: #9823db;
+    border: none;
+    margin-left: 30px;
+    width: 5rem;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+.btns {
     margin-left: 12rem;
 }
 
-.ex-price-heading{
+.ex-price-heading {
     position: relative;
     left: 1.5rem;
 }
-.ex-name-heading{
+
+.ex-name-heading {
     position: relative;
     left: 1rem;
 }
-.ex-title{
+
+.ex-title {
     height: 7vh;
     display: flex;
     position: fixed;
@@ -68,44 +74,56 @@
     background: rgb(15, 15, 15);
 
 }
+
 @media only screen and (max-width: 700px) {
-    .ex-title{
+    .ex-title {
         padding-left: 0;
         font-size: 1.5rem;
+        top: 4rem;
     }
-  .image img{
-    height: 50px;
-    margin-left: 40px;
-    margin-right: 50px;
-  }
-    .name{
-       font-size: 0.7rem;
-       width: 9rem;
+
+    .image img {
+        height: 50px;
+        margin-left: 40px;
+        margin-right: 50px;
     }
-    .price{
-      font-size: 0.7rem;
-      width:  10rem;
+
+    .name {
+        font-size: 0.7rem;
+        width: 9rem;
     }
-    .rank{
-     font-size: 0.7rem;
+
+    .price {
+        font-size: 0.7rem;
+        width: 10rem;
     }
-    .ex-cards{
+
+    .rank {
+        font-size: 0.7rem;
+    }
+
+    .ex-cards {
         display: flex;
         justify-content: space-between;
     }
-    .ex-headings{
+
+    .ex-headings {
         width: 100vw;
         letter-spacing: 0;
-        font-size:1rem ;
+        font-size: 1rem;
         margin-left: 0;
+        margin-top: -1rem;
+        padding-left: 15px;
     }
-    .ex-name-heading{
+
+    .ex-name-heading {
         position: relative;
         left: -2rem;
     }
-    .ex-price-heading{
+
+    .ex-price-heading {
         left: -2rem;
     }
-   
+
 
 }

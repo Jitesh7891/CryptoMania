@@ -2,9 +2,20 @@ import React from 'react'
 
 const NewsItem = (props)=> {
         let { title, description, imageUrl, newsUrl, author, date, source } = props;
+
+        const newsTemStyle={
+            border:'2px solid rgb(160, 160, 160)',
+            minHeight:'75vh',
+            padding:'2px',
+            backgroundColor:'rgb(40,40,40)',
+            color:'white'
+        }
+        if(window.innerWidth<500){
+            newsTemStyle.minHeight='unset'
+        }
         return (
             <div className="my-3">
-                <div className="card" style={{border:'2px solid rgb(160, 160, 160)',minHeight:'75vh',padding:'2px',backgroundColor:'rgb(40,40,40',color:'white'}}>
+                <div className="card" style={newsTemStyle}>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'flex-end',

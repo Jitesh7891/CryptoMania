@@ -6,6 +6,7 @@
 body{
   background: rgb(15, 15, 15);
   color: white;
-  font-family: 'Lobster',cursive;
+  font-family: 'Lobster',Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
+  padding-left: 5px;
 }
