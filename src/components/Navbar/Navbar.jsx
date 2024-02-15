@@ -8,7 +8,7 @@ const Header = () => {
     <div className='navbar' >
         <div className="logo">
             <Link to='/'>
-            <h1>CryptoVerse </h1>
+            <h1>CryptoMania</h1>
             </Link>
             <FaEthereum color='#00FF00' size={"25"} style={{marginLeft:"5px"}} /> 
         </div>

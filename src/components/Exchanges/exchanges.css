@@ -123,7 +123,7 @@
 
     .ex-name-heading {
         position: relative;
-        left: -2rem;
+        left: -1.5rem;
     }
 
     .ex-price-heading {
@@ -131,6 +131,7 @@
     }
 
     .exchanges{
+        padding-left: 10px;
         margin-top: 14rem;
     }
 }
