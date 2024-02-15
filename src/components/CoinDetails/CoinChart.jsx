@@ -52,7 +52,7 @@ const CoinChart = ({currency}) => {
     }), 
     datasets:[
         {
-            label: ` Price in Past Days ${days} in ${currency} `,
+            label: ` Price in Past ${days} Days in ${currency} `,
             data: chartData.map((value)=>value[1]),
             borderColor: '#9823db',
             borderWidth: '2' 
@@ -66,7 +66,7 @@ const CoinChart = ({currency}) => {
      {
       chartData.length === 0 ? ( <Loader/>) : (
 
-        <div>
+        <div >
         {/* <Line data={myData} />  */}
         <Line data={myData} options={{
           elements:{
@@ -74,7 +74,7 @@ const CoinChart = ({currency}) => {
                   radius:1, 
               }
           }
-        }} style={{marginTop:"5rem", width:"60rem"}} />
+        }} style={{marginTop:"5rem", width:"60rem",minHeight:'33vh'}} />
   
   <div className='btn' style={{marginTop:"30px"}}>
                <button onClick={()=>setDays(1)} >Daily</button>
