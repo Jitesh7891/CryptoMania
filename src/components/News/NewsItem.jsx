@@ -3,6 +3,8 @@ import React from 'react'
 const NewsItem = (props)=> {
         let { title, description, imageUrl, newsUrl, author, date, source } = props;
 
+        console.log(imageUrl)
+
         const newsTemStyle={
             border:'2px solid rgb(160, 160, 160)',
             minHeight:'78vh',
@@ -25,7 +27,7 @@ const NewsItem = (props)=> {
                     }> 
                         <span className="badge rounded-pill"style={{backgroundColor:'#9823db'}}> {source} </span>
                     </div>
-                    <img className='card-img-top" newsimg' src={imageUrl?imageUrl:"./bitcoinImg.jpg"} alt="..." />
+                    <img className='card-img-top" newsimg' src={imageUrl!="missing_large.png"?imageUrl:"./bitcoinImg.jpg"} alt="..." />
                     <div className="card-body" >
                         <h5 className="card-title">{title?title.slice(0,58)+"...":"Breaking News!"}  </h5>
                         <p className="card-text">{description?description.slice(0,80)+"...":"Click on Read More to get the news description and much more ..."}</p>
